@@ -4,4 +4,4 @@
 
 
 ## 参考链接
-* 1 [lock_guard()类模板在作用域内自动加锁解锁](https://www.coder.work/article/1199097)
+* 1 [派生类调用基类的构造函数对成员数据进行初始化](https://www.coder.work/article/1199097)

@@ -54,25 +54,26 @@ const double A::d1 = 3.4;
 ```c++
 class A {
 public:
-	static const int i1;
-	static const bool b1;
-	static const char c1;
+//以下错误，static constexpr类型变量必须在类内定义与初始化 
+//static constexpr int i1;
+//static constexpr bool b1;
+//static constexpr char c1;
+//static constexpr float f1;
+//static constexpr double d1;
 
-	static const float f1;
-	static const double d1;
-	//整形类型的static const变量可以在类内初始化
-	static const int i2 = 2;
-	static const bool b2 = true;
-	static const char c2 = 'c';
-	//以下错误，不能将static const类型的变量在类内初始化,只能进行声明
-	//static const float f2 = 3.1;
-	//static const double d2 = 3.2;
+//整形和浮点型类型的static const变量必须在类内初始化
+static constexpr int i2 = 2;
+static constexpr bool b2 = true;
+static constexpr char c2 = 'c';
+static constexpr float f2 = 3.1;
+static constexpr double d2 = 3.2;
 };
-const int A::i1 = 1;
-const bool A::b1 = true;
-const char A::c1 = 'c';
-const float A::f1 = 3.3;
-const double A::d1 = 3.4;
+//以下错误，static constexpr类型变量不能在类外初始化 
+//constexpr int A::i1 = 1;
+//constexpr bool A::b1 = true;
+//constexpr char A::c1 = 'c';
+//constexpr float A::f1 = 3.3;
+//constexpr double A::d1 = 3.4;
 
 ```
 

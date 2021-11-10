@@ -75,3 +75,6 @@ const float A::f1 = 3.3;
 const double A::d1 = 3.4;
 
 ```
+
+## 参考链接
+* 1 [`static constexp`关键字使用](https://blog.csdn.net/mxyhktk/article/details/112016564)

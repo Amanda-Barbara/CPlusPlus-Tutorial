@@ -33,7 +33,7 @@ public:
     typedef _Compare                                      key_compare;
     typedef _Alloc                                        allocator_type;
 private:
-    // key为key,value为key+data
+    // key为key,value为key+doc
     typedef _Rb_tree<key_type, value_type, _Select1st<value_type>,
             key_compare, _Pair_alloc_type> _Rep_type;
 

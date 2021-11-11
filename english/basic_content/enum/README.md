@@ -119,7 +119,7 @@ Cannot be initialized in a class declaration const data memeber。The following 
 ```c++
 class A 
 {
-  const int SIZE = 100;   // Error，Attempt to initialize const data member in class declaration 
+  const int SIZE = 100;   // Error，Attempt to initialize const doc member in class declaration 
   int array[SIZE];  // Error，Unknown size 
 }; 
 ```

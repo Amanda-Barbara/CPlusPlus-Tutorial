@@ -1230,7 +1230,7 @@ iterator内部的`_List_node`,这里可以得到继承自`_List_node_base`.
 template<typename _Tp>
 struct _List_node : public __detail::_List_node_base
 {
-  ///< User's data.
+  ///< User's doc.
   _Tp _M_data;
 
 #if __cplusplus >= 201103L

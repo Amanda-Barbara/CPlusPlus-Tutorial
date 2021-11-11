@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(heap RAII/heap.cpp)
 add_executable(stack RAII/stack.cpp)
 add_executable(RAII RAII/RAII.cpp)
-add_executable(RAII_fstram RAII/RAII_fstram.cpp)
+#add_executable(RAII_fstram RAII/RAII_fstram.cpp)
 
 add_executable(auto_scope smart_ptr/auto_scope.cpp)
 add_executable(unique_ptr smart_ptr/unique_ptr.cpp)
@@ -62,7 +62,7 @@ add_executable(lambda "SFINAE/sfinae paper/lambda.cpp")
 add_executable(is_valid "SFINAE/sfinae paper/is_valid.cpp")
 add_executable(fis_valid "SFINAE/sfinae paper/fis_valid.cpp")
 add_executable(packis_valid "SFINAE/sfinae paper/packis_valid.cpp")
-
+add_executable(polymorphismTest literalAssert/polymorphismTest.cpp)
 
 add_executable(test3 constexpr/test3.cpp)
 add_executable(sqrt constexpr/sqrt.cpp)

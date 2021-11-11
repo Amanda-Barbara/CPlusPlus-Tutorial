@@ -32,9 +32,9 @@ int main()
     auto hp = hash<int*>();
     cout << "hash(nullptr)  = "
          << hp(nullptr) << endl;
-    cout << "hash(v.data()) = "
+    cout << "hash(v.doc()) = "
          << hp(v.data()) << endl;
-    cout << "v.data()       = "
+    cout << "v.doc()       = "
          << static_cast<void*>(v.data())
          << endl;
 

@@ -246,3 +246,8 @@ int main()
 Welcome to Apple!
 ```
 
+
+## 参考链接
+* 1 [静态成员](https://segmentfault.com/a/1190000021146165)
+* 2 [为什么要使用静态成员](https://www.zhihu.com/question/34018632)
+

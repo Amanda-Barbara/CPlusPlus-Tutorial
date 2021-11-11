@@ -201,6 +201,7 @@ C++2.0 是一个简称，意为「现代 C++」，包括 C++11/14/17/20。
 - [noexcept](./c++2.0/c++11/noexcept.cpp)
 
 - [override](./c++2.0/c++11/override.cpp)
+- [overridefinal](learn_class/modern_C++_30/literalAssert/overridefinal.cpp)
 
 - [final](./c++2.0/c++11/final.cpp)
 

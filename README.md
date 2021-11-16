@@ -271,6 +271,7 @@ C++2.0 是一个简称，意为「现代 C++」，包括 C++11/14/17/20。
 - [创建线程的五种类型](./concurrency/Threading_In_CPlusPlus/2.create_type)
 - [Join 与 Detachs](./concurrency/Threading_In_CPlusPlus/3.join_detach)
 - [mutex in C++ Threading](./concurrency/Threading_In_CPlusPlus/4.mutex)
+- [std::barrier](concurrency/Threading_In_CPlusPlus/6.barrier/README.md)
 
 > 学习自：
 >

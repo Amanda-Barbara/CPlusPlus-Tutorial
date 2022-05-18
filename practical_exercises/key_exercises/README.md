@@ -24,3 +24,20 @@
 ├── [输入输出重载.cpp](输入输出重载.cpp)
 ├── [输出格式.cpp](输出格式.cpp)
 
+## 运算符重载
+* `new`、`delete`、`size_t`是运算符，而不是函数
+```text
+void* MyClass::operator new(size_t size) {
+   return malloc(size);
+}
+
+void MyClass::operator delete(void* ptr) {
+   free(ptr);
+}
+inline MatStep::operator size_t() const
+{
+    CV_DbgAssert( p == buf );
+    return buf[0];
+}
+```
+

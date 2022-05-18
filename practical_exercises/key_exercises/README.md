@@ -25,7 +25,7 @@
 ├── [输出格式.cpp](输出格式.cpp)
 
 ## 运算符重载
-* `new`、`delete`、`size_t`是运算符，而不是函数
+* `new`、`delete`、`size_t`是操作符，而不是函数
 ```text
 void* MyClass::operator new(size_t size) {
    return malloc(size);

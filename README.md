@@ -354,7 +354,8 @@ map<int, int> mp{
 #### 9.5 在 Linux 上的 Debug 工具 rr - 拥有回到过去的能力
 - [用rr来进行debug](./tool/用rr来进行debug.md)
 
-### 10.拓展部分
+### 10.拓展部分(第三方库使用)
+- [`opencv`使用教程](3rdparty/opencv/README.md)
 
 #### 10.1 一些问题
 

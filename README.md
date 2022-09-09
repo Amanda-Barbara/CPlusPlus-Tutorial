@@ -372,22 +372,3 @@ map<int, int> mp{
 
 
 
-### 12.赞助我
-
-如果觉得不错，赞助我吧~
-
-<table>
-  <tbody>
-    <tr>
-      <th align="center" style="height=200 width="200">
-          <img src="https://light-city.club/sc/assets/images/alipay.jpg" height="200" width="200" ><br>
-          支付宝
-      </th>
-      <th align="center" style="height=200 width="200">
-          <img src="https://light-city.club/sc/assets/images/wechat.png" height="200" width="200" ><br>
-          微信
-      </th>
-    </tr>
-  </tbody>
-</table>
-

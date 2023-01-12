@@ -217,3 +217,5 @@ Dump of assembler code for function Derived::fun2():
 End of assembler dump.
 ```
 
+## 参考链接
+* 1 [言简意赅之汇编教程中内存模型的堆和栈](https://www.ruanyifeng.com/blog/2018/01/assembly-language-primer.html)

@@ -1,3 +1,0 @@
-/share4algo02/e00130/workspace/tutorial/programming_language/CPlusPlus-Tutorial/basic_content/bind/src/CMakeFiles/bind_function_test.dir
-/share4algo02/e00130/workspace/tutorial/programming_language/CPlusPlus-Tutorial/basic_content/bind/src/CMakeFiles/edit_cache.dir
-/share4algo02/e00130/workspace/tutorial/programming_language/CPlusPlus-Tutorial/basic_content/bind/src/CMakeFiles/rebuild_cache.dir

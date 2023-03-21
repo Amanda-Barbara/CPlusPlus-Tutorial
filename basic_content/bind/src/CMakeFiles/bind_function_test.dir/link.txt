@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/bind_function_test.dir/bind_function_test.cpp.o -o bind_function_test 

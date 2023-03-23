@@ -29,5 +29,5 @@ class Derivered1 : public Base1 {
     virtual void func() {}      // error: overriding final function ‘virtual void Base1::func()’
 };
 int main() {
-
+ 
 }

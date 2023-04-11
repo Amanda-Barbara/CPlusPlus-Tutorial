@@ -1,11 +1,31 @@
 # 宏那些事
 
-## 关于作者：
+## [`__COUNTER__`宏](./COUNTER_test.cpp)
+```text
+__COUNTER__ 是 GNU 编译器的非标准编译器扩展。
+可以认为它是一个计数器，代表一个整数，它的值一般被初始化为0，在每次编译器编译到它时，会自动加1。
+```
+* 基于`__COUNTER__`实现编译检查，创建唯一标识，以防止同一个声明多次出现而导致编译失败
+```c++
+#define COMPILER_CONCAT_(a, b) 	a##b
+#define COMPILER_CONCAT(a, b) 	COMPILER_CONCAT_(a, b)
+#define COMPILER_ASSERT(e) 		enum { COMPILER_CONCAT(compiler_assert_, __COUNTER__) = 1/((e) ? 1 : 0) }
 
-个人公众号：
 
-![](../img/wechat.jpg)
+/// 使用方法
+#define A		(1)
+#define B		(2)
 
+COMPILER_ASSERT(A == 1);	///< 可以编译通过
+COMPILER_ASSERT(A == B);	///< 编译报错
+```
+```text
+如果e为假，则除以零，会导致编译时出错，进而得知条件出错。
+特殊值 __COUNTER__用于创建唯一值并附加到 compiler_assert_ 以创建唯一标识。可以防止由于多次声明同一个枚举而导致的冲突。
+
+在KEIL中要使用 __COUNTER__，需要在编译器控制参数增加 --gnu 
+
+```
 ## 1.宏中包含特殊符号
 
 分为几种：`#`，`##`，`\`

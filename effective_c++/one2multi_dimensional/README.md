@@ -14,6 +14,12 @@ float(&output1)[1][col] =*((float(*)[1][col])(buffer + col));
 1. 代码简洁，节省了使用`for`循环的方式来编排数据的摆放。
 2. 节省了空间的使用，使用`buffer`的引用避免了内存的开销。
 
+* `buffer`、`output0`、`output0_ref`、`output1`的变量及其存储地址信息
+
+![](data/oneToMultiDimTest.png)
+
+![](data/oneToMultiDimTest2.PNG)
+
 * 执行结果
 ```text
 output0[0,0]: 0.000000; output0_ref[0,0]: 0.000000; output1[0,0]: 8.000000.

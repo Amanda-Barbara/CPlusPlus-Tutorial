@@ -29,3 +29,5 @@ address of the output1 : 0x7fffffffd350
 buffer=7fffffffd340, output0=7fffffffd340, output1=7fffffffd350
 buffer=140737488343872, output0=140737488343872, output1=140737488343888
 ```
+
+* 待解读`int(*)[]`用法

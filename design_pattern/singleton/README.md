@@ -7,6 +7,8 @@
 ## [不加`static`测试](./static_singleton_test.cpp)
 * 如果`Manager *inst = new Manager();`不加上`static`关键字，可发现`m2`对象的`fmap`字典变量没有`"zjw"`关键字，`m2`是通过静态成员函数`Global()`构造了一个新的`Manager`类型指针对象；`m1`以及`m3`对象中的`fmap`字典变量中均有`"zjw"`关键字。`m3`是通过调用`Manager`的默认拷贝构造函数。
 
+* 单例设计模式之`static`关键字很重要，不能省去，省去之后就无法称之为单例对象。
+
 ![](./data/singleton_with_static_test.png)
 
 

@@ -18,10 +18,11 @@ int main() {
     int &&k=std::move(ii);  //std::move定义于<utility>，k的地址与ii相同。
     printf("address of ii: %p.\n", &ii);
     printf("address of k: %p.\n", &k);
-    for (size_t i = 0; i < 1000000000; i++)
-    {
-        printf("address of ii: %p.\n", &ii);
-    }
+    //执行如下被注释的代码，发现变量ii没有销毁。
+    // for (size_t i = 0; i < 1000000000; i++)
+    // {
+    //     printf("address of ii: %p.\n", &ii);
+    // }
     
     return 0;
 }

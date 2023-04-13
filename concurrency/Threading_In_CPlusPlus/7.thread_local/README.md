@@ -50,7 +50,6 @@ Rage counter for c: 102
 #include <string>
 #include <thread>
  
-
 // unsigned int rage = 1; 
 std::mutex cout_mutex;
  
@@ -81,3 +80,7 @@ int main()
     c.join();
 }
 ```
+
+## 参考链接
+* 1 [`thread_local`注解](https://murphypei.github.io/blog/2020/02/thread-local)
+* 2 [`cppreference.com`之`thread_local`注解](https://en.cppreference.com/w/cpp/language/storage_duration)

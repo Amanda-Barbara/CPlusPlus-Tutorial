@@ -1,4 +1,5 @@
-#include<iostream> 
+#include <iostream> 
+#include <stdio.h>
 using namespace std; 
 
 class Apple 
@@ -15,7 +16,9 @@ class Apple
         cout << "Inside Destructor\n"; 
     } 
 }; 
-
+static Apple obj2;
+// printf("obj.i : %d\n.", obj2.i);
+// obj.i = 3;
 int main() 
 { 
     int x = 0; 

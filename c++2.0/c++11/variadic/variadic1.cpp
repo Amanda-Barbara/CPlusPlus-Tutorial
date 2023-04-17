@@ -27,6 +27,6 @@ void printX(const Type &...args) {
 
 
 int main() {
-    printX(1, "hello", bitset<16>(377), 42);
+    printX(1, "hello", bitset<32>(377), 42);
     return 0;
 }

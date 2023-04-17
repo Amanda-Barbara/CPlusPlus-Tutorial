@@ -1,5 +1,31 @@
 #include <iostream>
 
+template <class Derived> 
+struct Base
+{
+    void Interface() {
+        // ...
+        static_cast<Derived*>(this)->Implementation();
+        // ...
+    }
+
+};
+
+struct Derived : Base<Derived> {
+    void Implementation();
+};
+
+template <typename T>
+class derived : public Base<derived<T>> {};
+
+template <typename T>
+class derived : public Base<derived<int>>{
+  void Implementation(){
+    std::cout << 999 << std::endl;
+  };
+}
+
+
 template <class Derived>
 class ObjectCounter {
  private:
@@ -33,5 +59,9 @@ int main() {
             << "\n";
 
   std::cout << "number of MyCharString: " << MyCharString::CountLive() << "\n";
+
+
+  derived<int>
+
   return 0;
 }

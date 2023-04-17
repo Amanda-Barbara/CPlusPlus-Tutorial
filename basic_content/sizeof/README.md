@@ -9,6 +9,22 @@
 - 虚函数继承，不管是单继承还是多继承，都是继承了基类的vptr。(32位操作系统4字节，64位操作系统 8字节)！
 - 虚继承,继承基类的vptr。
 
+
+## `sizeof`与`align_of`区别
+* 关键字`sizeof(X)`返回的是结构体`X`整体占用存储空间的字节数；
+* 关键字`alignof(X)`返回的是结构体`X`中某一类型占用存储空间最大的字节数
+```c++
+// objects of type X must be allocated at 4-byte boundaries
+// because X.n must be allocated at 4-byte boundaries
+// because int's alignment requirement is (usually) 4
+struct X
+{
+    int n;  // size: 4, alignment: 4
+    char c; // size: 1, alignment: 1
+    // three bytes of padding bits
+}; // size: 8, alignment: 4 
+```
+
 ## 1.原则1
 
 ```c++

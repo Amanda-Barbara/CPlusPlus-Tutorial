@@ -19,6 +19,7 @@ struct factorial<0> {
 
 int main() {
 
-    printf("%d\n", factorial<-1>::value);
+    printf("%d\n", factorial<-3>::value);
+    printf("%d\n", factorial<5>::value);
     return 0;
 }

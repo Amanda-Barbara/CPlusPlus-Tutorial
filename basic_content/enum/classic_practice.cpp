@@ -79,6 +79,7 @@ int main()
     cout<<c11<<endl;
     
     Color2 c2 = Color2::RED;
+    cout << int(c2) << endl;
     cout << static_cast<int>(c2) << endl;
     
     char c3 = static_cast<char>(Color3::RED);

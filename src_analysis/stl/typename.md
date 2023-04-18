@@ -130,6 +130,7 @@ struct iterator_traits
   typedef typename _Iterator::difference_type   difference_type;
   typedef typename _Iterator::pointer           pointer;
   typedef typename _Iterator::reference         reference;
+//   using reference = typename _Iterator::reference         ; //也可以使用using关键字实现与typedef相同的结果
 };
 ```
 

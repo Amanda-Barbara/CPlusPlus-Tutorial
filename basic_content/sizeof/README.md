@@ -205,3 +205,7 @@ int main()
 }
 ```
 
+## 参考链接
+* 1 [`cppreference`之`alignof`讲解](https://en.cppreference.com/w/cpp/language/object#Alignment)
+
+

@@ -12,7 +12,13 @@ public:
     virtual void func() {}
 };
 class Derivered:public Base{
-    virtual void func(int) override {}  //error: ‘virtual void Derivered::func(int)’ marked ‘override’, but does not override
+    public:
+    virtual void func(int) {
+    // virtual void func(int) override {
+    // void func() override {
+        printf("func has overrided.");
+    }  
+    //error: ‘virtual void Derivered::func(int)’ marked ‘override’, but does not override
 };
 // override用于虚函数，上面的virtual void func(int)实际上不是重写父类的虚函数，而是定义一个新的虚函数，
 // 我们的本意是重写虚函数，当不加overrride的时候,这样写编译器不会报错，
@@ -20,5 +26,7 @@ class Derivered:public Base{
 // 这样就能给我们对虚函数的重写做检查!
 
 int main() {
-
+    Derivered d;
+    d.func(999);
+    return 0;
 }

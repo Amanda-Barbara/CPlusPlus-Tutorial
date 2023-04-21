@@ -1,31 +1,8 @@
-# tuple用法
+# tuple用法总结
 
-```c++
-#include <tuple>
-#include <iostream>
-#include <string>
-#include <stdexcept>
- 
-std::tuple<double, char, std::string> get_student(int id)
-{
-    switch (id)
-    {
-        case 0: return {3.8, 'A', "Lisa Simpson"};
-        case 1: return {2.9, 'C', "Milhouse Van Houten"};
-        case 2: return {1.7, 'D', "Ralph Wiggum"};
-        case 3: return {0.6, 'F', "Bart Simpson"};
-    }
- 
-    throw std::invalid_argument("id");
-}
- 
-int main()
-{
-    // C++17 structured binding:
-    const auto [ gpa3, grade3, name3 ] = get_student(3);
-    std::cout << "ID: 3, "
-              << "GPA: " << gpa3 << ", "
-              << "grade: " << grade3 << ", "
-              << "name: " << name3 << '\n';
-}
-```
+## `tuple`类模板
+* `C++`中，`std::vector`、`std::list`、`std::map`、`std::set`等容器都只能存储同一种类型，属于同质容器。而`std::tuple`类模板弥补了`std::pair`只能存储两种类型对象的缺陷，可以像`class`或`struct`一样存储不同类型的对象，只是访问的方式不同。
+
+## 参考链接
+* 1 [`cpprefernce`之`tuple`教程](https://en.cppreference.com/w/cpp/utility/tuple)
+* 2 [走近`std::tuple`，揭秘`C++`元组的底层实现原理](https://zhuanlan.zhihu.com/p/356954012)

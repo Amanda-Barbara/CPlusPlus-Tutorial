@@ -1,5 +1,11 @@
 # 常用容器总结
 
+## [`stl`容器中的`std::advance`函数模板](./list_advance_test.cpp)
+```c++
+template <class InputIterator, class Distance>  void advance (InputIterator& it, Distance n);
+```
+* 将迭代器向前移动n个元素位置。
+
 ## [`vector`之`assign`属性用法](./vector_assign_test.cpp)
 * `assign`使用不同的构造函数实现了多种不同的用法
 

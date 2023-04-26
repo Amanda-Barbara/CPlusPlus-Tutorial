@@ -6,6 +6,8 @@
 #include <thread>
 #include <vector>
 #include <numeric>
+#include <functional>
+
 
 using namespace std;
 

@@ -52,3 +52,4 @@ const [lvalue]: 999.
 
 ## 参考链接
 * 1 [`cppreference`之`forward`讲解](https://en.cppreference.com/w/cpp/utility/forward)
+* 2 [`cplusplus`之`forward`讲解](https://cplusplus.com/reference/utility/forward/)

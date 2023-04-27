@@ -23,3 +23,4 @@ template <class InputIterator, class Distance>  void advance (InputIterator& it,
 
 ## 参考链接
 * 1 [`cppreference`之`vector`的`assign`属性讲解](https://en.cppreference.com/w/cpp/container/vector/assign)
+* 2 [`cplusplus`之`std::fill`函数模板讲解](https://cplusplus.com/reference/algorithm/fill/)

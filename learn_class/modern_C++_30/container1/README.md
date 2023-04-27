@@ -1,20 +1,8 @@
 # 常用容器总结
 
 ## [`iterator_traits`类模板](./advance_implementation_test.cpp)
-* 通过`iterator_traits`萃取机可以实现迭代器的静态多态
-* `iterator_traits`类模板的属性定义如下：
-```c++
-template<typename _Tp>
-struct iterator_traits<_Tp*>
-{
-    typedef random_access_iterator_tag iterator_category;
-    typedef _Tp                         value_type;
-    typedef ptrdiff_t                   difference_type;
-    typedef _Tp*                        pointer;
-    typedef _Tp&                        reference;
-};
-```
-* 迭代器继承关系
+* `iterator_traits`萃取技术是通过静态调用不同功能的迭代器以实现对容器元素的算法操作。
+* 不同功能迭代器继承关系
 ```c++
  ///  Marking input iterators.
   struct input_iterator_tag { };
@@ -33,6 +21,32 @@ struct iterator_traits<_Tp*>
   /// iterator operations.
   struct random_access_iterator_tag : public bidirectional_iterator_tag { };
 ```
+
+![](./data/IteratorCategories.png)
+
+* `iterator_traits`类模板的属性定义如下：
+```c++
+template<typename _Iterator>
+    struct iterator_traits
+    {
+      typedef typename _Iterator::iterator_category iterator_category;
+      typedef typename _Iterator::value_type        value_type;
+      typedef typename _Iterator::difference_type   difference_type;
+      typedef typename _Iterator::pointer           pointer;
+      typedef typename _Iterator::reference         reference;
+    };
+
+template<typename _Tp>
+struct iterator_traits<_Tp*>
+{
+    typedef random_access_iterator_tag iterator_category;
+    typedef _Tp                         value_type;
+    typedef ptrdiff_t                   difference_type;
+    typedef _Tp*                        pointer;
+    typedef _Tp&                        reference;
+};
+```
+
 
 ## [`std::fill`函数模板](./vector_fill_test.cpp)
 ```c++

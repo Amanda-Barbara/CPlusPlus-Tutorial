@@ -1,5 +1,39 @@
 # 常用容器总结
 
+## [`iterator_traits`类模板](./advance_implementation_test.cpp)
+* 通过`iterator_traits`萃取机可以实现迭代器的静态多态
+* `iterator_traits`类模板的属性定义如下：
+```c++
+template<typename _Tp>
+struct iterator_traits<_Tp*>
+{
+    typedef random_access_iterator_tag iterator_category;
+    typedef _Tp                         value_type;
+    typedef ptrdiff_t                   difference_type;
+    typedef _Tp*                        pointer;
+    typedef _Tp&                        reference;
+};
+```
+* 迭代器继承关系
+```c++
+ ///  Marking input iterators.
+  struct input_iterator_tag { };
+
+  ///  Marking output iterators.
+  struct output_iterator_tag { };
+
+  /// Forward iterators support a superset of input iterator operations.
+  struct forward_iterator_tag : public input_iterator_tag { };
+
+  /// Bidirectional iterators support a superset of forward iterator
+  /// operations.
+  struct bidirectional_iterator_tag : public forward_iterator_tag { };
+
+  /// Random-access iterators support a superset of bidirectional
+  /// iterator operations.
+  struct random_access_iterator_tag : public bidirectional_iterator_tag { };
+```
+
 ## [`std::fill`函数模板](./vector_fill_test.cpp)
 ```c++
 template <class ForwardIterator, class T>  void fill (ForwardIterator first, ForwardIterator last, const T& val);
@@ -24,3 +58,4 @@ template <class InputIterator, class Distance>  void advance (InputIterator& it,
 ## 参考链接
 * 1 [`cppreference`之`vector`的`assign`属性讲解](https://en.cppreference.com/w/cpp/container/vector/assign)
 * 2 [`cplusplus`之`std::fill`函数模板讲解](https://cplusplus.com/reference/algorithm/fill/)
+* 3 [`modernescpp`之`std::iterator_traits`教程](https://www.modernescpp.com/index.php/softwaredesign-with-traits-and-tag-dispatching)

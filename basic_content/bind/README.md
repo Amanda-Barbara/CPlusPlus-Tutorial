@@ -16,6 +16,8 @@ std::cout << "3.5 / 4.5 = " << dispTable['/'](3.5, 4.5) << '\n';
 
 * [参考示例](src/bind_function_test.cpp)
 
+## 类型擦除
+
 
 ## 参考链接
 * 1 [`std::function`与`std::bing`以及`type erasure`类型擦除教程](https://www.modernescpp.com/index.php/type-erasure)

@@ -47,6 +47,7 @@ struct iterator_traits<_Tp*>
 };
 ```
 
+* 不同迭代器`Iter`的`std::iterator_traits<Iter>::difference_type`属性测试[](./iterator_traits_difference_type_test.cpp), 编译时使用终端命令`g++ -std=c++17 -o iterator_traits_difference_type_test iterator_traits_difference_type_test.cpp`
 
 ## [`std::fill`函数模板](./vector_fill_test.cpp)
 ```c++

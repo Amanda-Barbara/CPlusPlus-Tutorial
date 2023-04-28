@@ -1,7 +1,7 @@
 # 常用容器总结
 
 ## [`iterator_traits`类模板](./advance_implementation_test.cpp)
-* `iterator_traits`萃取技术是通过静态调用不同功能的迭代器以实现对容器元素的算法操作。
+* `iterator_traits`萃取技术是通过把不同功能的迭代器作为模板参数以实现对不同容器元素的算法操作，进而实现模板的静态多态。前提是模板参数必须是迭代器类型的，因为`std::iterator_traits`类模板中的属性跟迭代器是绑定的。
 * 不同功能迭代器继承关系
 ```c++
  ///  Marking input iterators.
@@ -24,7 +24,7 @@
 
 ![](./data/IteratorCategories.png)
 
-* `iterator_traits`类模板的属性定义如下：
+* `iterator_traits`类模板的成员属性定义如下：
 ```c++
 template<typename _Iterator>
     struct iterator_traits

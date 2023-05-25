@@ -39,13 +39,23 @@ COMPILER_ASSERT(A == B);	///< 编译报错
 例如：
 
 ```c++
+#include <iostream>
+using namespace std;
+
 #define exp(s) printf("test s is:%s\n",s)
 #define exp1(s) printf("test s is:%s\n",#s)
 #define exp2(s) #s 
+#define exp3(s) s
 int main() {
-    exp("hello");
-    exp1(hello);
-
+    exp("hello"); //像函数一样调用
+    exp1(hello); //hello虽然是一个未定义的，但是可以通过宏定义把未定义的hello转换为字符串hello
+    int a = 10; 
+    exp1(a); //把int类型的变量a字符串化为"a"
+    exp1(reg "fa" off); //把未定义的reg "fa" off字符串化为reg "fa" off
+    exp1(exp); //把exp当作形参s，并打印出exp
+    cout << exp3(3) << endl; //打印出常量3
+    // cout << exp3(gaga) << endl; //由于gaga未定义，编译未通过
+    cout << exp2(gaga) << endl; //把未定义的gaga字符串化
     string str = exp2(   bac );
     cout<<str<<" "<<str.size()<<endl;
     /**
@@ -59,6 +69,18 @@ int main() {
     cout<<str1<<" "<<str1.size()<<endl;
     return 0;
 }
+```
+运行结果如下：
+```text
+test s is:hello
+test s is:hello
+test s is:a
+test s is:reg "fa" off
+test s is:exp
+3
+gaga
+bac 3
+asda bac 8
 ```
 
 上述代码给出了基本的使用与空格处理规则，空格处理规则如下：

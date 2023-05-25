@@ -38,6 +38,7 @@ COMPILER_ASSERT(A == B);	///< 编译报错
 
 例如：
 
+* 使用`gcc -E test_macro.cpp -o test_macro.log`脚本对`test_macro.cpp`的宏定义进行展开替换
 ```c++
 #include <iostream>
 using namespace std;
@@ -51,7 +52,7 @@ int main() {
     exp1(hello); //hello虽然是一个未定义的，但是可以通过宏定义把未定义的hello转换为字符串hello
     int a = 10; 
     exp1(a); //把int类型的变量a字符串化为"a"
-    exp1(reg "fa" off); //把未定义的reg "fa" off字符串化为reg "fa" off
+    exp1(reg "fa" off); //把未定义的reg "fa" off字符串化为"reg \"fa\" off"，是一个带有转义字符的字符串
     exp1(exp); //把exp当作形参s，并打印出exp
     cout << exp3(3) << endl; //打印出常量3
     // cout << exp3(gaga) << endl; //由于gaga未定义，编译未通过

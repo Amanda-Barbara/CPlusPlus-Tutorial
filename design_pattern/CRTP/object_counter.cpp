@@ -1,23 +1,31 @@
 #include <iostream>
 
 
-// template <class Derived> 
-// struct Base
-// {
-//     void Interface() {
-//         // ...
-//         static_cast<Derived*>(this)->Implementation();
-//         // ...
-//     }
+template <class Derived> 
+struct Base
+{
+    void Interface() {
+        static_cast<Derived*>(this)->Implementation(); 
+        /*
+        把Base类对象通过static_cast关键字强制转换为Derived类的对象指针，
+        然后再调用Derived类对象指针的成员函数Implementation.
+        如果继承自Base类的派生类Derived没有实现Implementation，则会调用Base类的Implementation接口函数。
+        */        
+    }
+    void Implementation(){printf("base class implementation.\n");}
 
-// };
+};
 
-// struct Derived : Base<Derived> {
-//     void Implementation();
-// };
+// 不声明DerivedTest为模板类
+struct DerivedTest : Base<DerivedTest> {
+    void Implementation(){printf("derived class implementation.\n");}; //注释之后就会调用Base类的Implementation接口函数。
+};
 
-// template <typename T>
-// class derived : public Base<derived<T>> {};
+// 声明DerivedTestTemp为模板类
+template <typename T>
+class DerivedTestTemp : public Base<DerivedTestTemp<T>> {};// 没有实现Implementation函数，则会调用Base类的Implementation函数。
+
+
 
 
 template <class Derived>
@@ -49,10 +57,16 @@ template <>
 class MyVector<std::string> : public ObjectCounter<MyVector<std::string>> {}; //声明和定义新类型
 
 int main() {
+
+  DerivedTest derivedTest;
+  derivedTest.Interface();
+  DerivedTestTemp<int> derivedTestTemp;
+  derivedTestTemp.Interface();
+  
+
   MyVector<int> v1, v2;
   MyVector<std::string> s;
   MyCharString s1;
-
   std::cout << "number of MyVector<int>: " << MyVector<int>::CountLive() << "\n";
   std::cout << "number of MyVector<std::string>: " << s.CountLive() << "\n";
   std::cout << "number of MyCharString: " << MyCharString::CountLive() << "\n";

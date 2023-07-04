@@ -9,7 +9,7 @@ using namespace std;
 
 // 第一种使用
 // type alias
-// 等价于typedef void(*func)(int, int);
+// 等价于typedef void(*fun)(int, int);
 using fun=void (*)(int, int);
 
 void example(int, int) {}

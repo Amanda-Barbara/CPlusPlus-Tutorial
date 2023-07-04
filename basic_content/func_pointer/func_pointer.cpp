@@ -15,7 +15,8 @@ using namespace std;
 void (*pFun)(int); 
 
 /**
- * @brief 代表一种新类型，不是变量！所以与上述的pFun不一样！
+ * @brief typedef关键字表示的是一种类型别名，代表一种新类型，不是变量！所以与上述的pFun不一样！
+ * pFun是一个函数，而经过typedef关键字修饰过的func则是一个函数指针类型。可以把符合的参数类型的函数赋值给func
  */
 typedef void (*func)(void);  
 

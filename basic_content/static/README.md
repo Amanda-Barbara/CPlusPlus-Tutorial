@@ -246,6 +246,11 @@ int main()
 Welcome to Apple!
 ```
 
+## `__attribute__((unused))`之静态函数使用
+* 在`C`程序中，如果定义了一个静态函数，而没有去使用，编译时会有一个告警： 而使用`__attribute__((unused))`可以告诉编译器忽略此告警。
+
+## 关键字搜索
+
 
 ## 参考链接
 * 1 [静态成员](https://segmentfault.com/a/1190000021146165)

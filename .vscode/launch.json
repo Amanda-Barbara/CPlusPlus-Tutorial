@@ -1,0 +1,66 @@
+{
+    "configurations": [
+        {
+            "name": "Python",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": true,
+            "program": "${file}",
+            "cwd": "${workspaceRoot}",
+        },
+
+        {
+            "name": "cpptest",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/cpptest",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "tvm_rpc",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/practical_exercises/algorithm/matrix/src/build/matrix_multiplication_test",
+            "args": ["server", 
+            "--host=0.0.0.0", 
+            "--port=9000",
+            "--port-end=9090",  
+            "--tracker=127.0.0.1:9190", 
+            "--key=rasp"],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+    ],
+}

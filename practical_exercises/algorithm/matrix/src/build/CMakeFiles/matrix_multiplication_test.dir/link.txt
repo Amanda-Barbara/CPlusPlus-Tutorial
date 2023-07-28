@@ -1,0 +1,1 @@
+/usr/bin/c++  -g3 -pthread CMakeFiles/matrix_multiplication_test.dir/matrix_multiplication_test.cpp.o -o matrix_multiplication_test 

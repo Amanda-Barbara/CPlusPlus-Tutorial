@@ -1,0 +1,3 @@
+/home/devy/project/tutorial/CPlusPlus-Tutorial/practical_exercises/algorithm/matrix/src/build/CMakeFiles/matrix_multiplication_test.dir
+/home/devy/project/tutorial/CPlusPlus-Tutorial/practical_exercises/algorithm/matrix/src/build/CMakeFiles/edit_cache.dir
+/home/devy/project/tutorial/CPlusPlus-Tutorial/practical_exercises/algorithm/matrix/src/build/CMakeFiles/rebuild_cache.dir
